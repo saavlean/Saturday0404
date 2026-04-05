@@ -1,0 +1,21 @@
+name: Pipeline Lab
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del repo
+        uses: actions/checkout@v3
+
+      - name: Mostrar estructura
+        run: ls -R
+
+      - name: Mensaje de prueba
+        run: echo "Pipeline funcionando correctamente 🚀"
